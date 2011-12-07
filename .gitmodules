@@ -1,0 +1,3 @@
+[submodule "sqlshade-php"]
+	path = sqlshade-php
+	url = git://github.com/kjim/sqlshade-php.git
