@@ -65,11 +65,11 @@ Array(IN):
 
 `True` values:
 
-    (`true`, `1`, `-1`, 'some string', [1, 2, 3], dict(a=1, b=2, c=3)).
+    ( `true` , `1` , `-1` , `'some string'` , `[1, 2, 3]` , `dict(a=1, b=2, c=3)` ).
 
 `False` values:
 
-    (`false`, `0`, `''`, `[]`, dict()).
+    ( `false` , `0` , `''` , `[]` , `dict()` ).
 
 Simple:
 
