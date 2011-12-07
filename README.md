@@ -157,7 +157,7 @@ Simple:
 
     SELECT * FROM /*#embed table*/t_table_MOCK/*#endembed*/;
 
-    #> bind(table='t_table_extension')
+    #> bind(table='t_table_dev')
     #> ---------------------
     #> SELECT * FROM t_table_dev;
 
