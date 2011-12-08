@@ -87,12 +87,23 @@ True/False keywords:
 
     SELECT
         fav
-        , /*#if false*/id/*#endif*/
-        , /*#if false*/updated_at/*#endif*/
-        , /*#if false*/created_at/*#endif*/
+        /*#if false*/, id/*#endif*/
+        /*#if false*/, updated_at/*#endif*/
+        /*#if false*/, created_at/*#endif*/
     FROM
         t_favorite
     ;
+
+    #> bind()
+    #> ------
+    #> SELECT
+    #>     fav
+    #>
+    #>
+    #>
+    #> FROM
+    #>     t_favorite
+    #> ;
 
 
 ### 3. For Directive
@@ -169,15 +180,12 @@ Embedded Another Tempalte:
 
     TPL1> SELECT * FROM t_favorite /*#embed orderby*//*#endembed*/;
 
-    TPL2> ORDER BY name ASC
+    TPL2> ORDER BY name /*#embed order*/ASC/*#endembed*/
 
-    TPL3> ORDER BY name DESC
-
-
-    #> TPL1.bind(orderby=TPL2)
+    #> TPL1.bind(orderby=TPL2, order='ASC')
     #> -----------------------
     #> SELECT * FROM t_favorite ORDER BY name ASC
 
-    #> TPL1.bind(orderby=TPL3)
+    #> TPL1.bind(orderby=TPL2, order='DESC')
     #> -----------------------
     #> SELECT * FROM t_favorite ORDER BY name DESC
