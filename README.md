@@ -17,7 +17,7 @@ There are a few reasons why SQLShade uses.
 1. Substitute Statement `/*:var*/'faketext'`
 2. If(Conditional) Directive `/*#if var*/ ... /*#endif*/`
 3. For(Loop) Directive `/*#for e in list_of_var*/ ... /*#endfor*/`
-4. Embed Directive `/*#embed var*/ ... /*#embed*/`
+4. Embed Directive `/*#embed var*/ ... /*#endembed*/`
 
 
 ### 1. Substitute Statement
